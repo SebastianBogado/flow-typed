@@ -462,6 +462,7 @@ async function installNpmLibDef(
   } catch (e) {
     console.error(`  !! Failed to install ${npmLibDef.name} at ${filePath}`);
     console.error(`  ERROR: ${e.message}`);
+    console.error(`  MOAR ERROR: ${JSON.stringify(e, null, 2)}`);
     return false;
   }
 }
